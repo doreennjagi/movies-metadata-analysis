@@ -1,94 +1,107 @@
-🎬 Movie Dataset Exploratory Data Analysis (EDA)
+# Movies Metadata – Exploratory Data Analysis
+
+![Movies Metadata Dashboard](movies_metadata_dashboard.png)
+
+A Python EDA project exploring **~45,000 movies** from the Kaggle Movies Metadata dataset, focusing on financial performance — budget, revenue, profit, and return on investment (ROI) — and what makes a film commercially successful.
+
+---
 
 ## 📌 Project Overview
-The goal of this project is to explore and analyze the **Movies Metadata dataset** from Kaggle.  
-I've focused on financial insights such as **budget, revenue, profit, return on investment (ROI)**, and trends over time.  
-This EDA helps us understand what makes a movie financially successful.
+
+| | |
+|--|--|
+| **Objective** | Analyze financial trends and uncover what drives movie profitability |
+| **Dataset** | Kaggle – Movies Metadata (~45,000 movies) |
+| **Key Metrics** | Budget, Revenue, Profit, ROI, Popularity, Vote Average |
+| **Tools** | Python, Pandas, Matplotlib, Seaborn, NumPy |
 
 ---
 
 ## 📂 Dataset
-- **Source**: Kaggle – [Movies Metadata](https://www.kaggle.com/datasets)  
-- **Shape**: ~45,000 movies, multiple features  
-- **Key Columns** used:
-  - `title` – Movie name  
-  - `release_date` – Release year  
-  - `budget` – Production budget  
-  - `revenue` – Box office revenue  
-  - `popularity`, `vote_average`, `vote_count` – Audience engagement metrics  
+
+- **Source**: Kaggle – [Movies Metadata](https://www.kaggle.com/datasets)
+- **Shape**: ~45,000 movies, multiple features
+- **Key Columns used**:
+  - `title` – Movie name
+  - `release_date` – Release year
+  - `budget` – Production budget
+  - `revenue` – Box office revenue
+  - `popularity`, `vote_average`, `vote_count` – Audience engagement metrics
 
 ---
 
 ## ⚙️ Data Preparation
-1. **Loaded dataset** with `low_memory=False` to avoid type-inference issues in Pandas.  
-2. **Converted financial columns** (`budget`, `revenue`, `popularity`, `vote_average`, `vote_count`) into numeric.  
-3. **Created new features**:  
-   - `profit = revenue – budget`  
-   - `roi = profit / budget` (return on investment)  
-   - `year` and `decade` extracted from `release_date`.  
-4. **Handled missing values** by coercing invalid entries into `NaN`.  
+
+1. Loaded dataset with `low_memory=False` to avoid type-inference issues in Pandas
+2. Converted financial columns (`budget`, `revenue`, `popularity`, `vote_average`, `vote_count`) to numeric
+3. Engineered new features:
+   - `profit = revenue – budget`
+   - `roi = profit / budget` (return on investment)
+   - `year` and `decade` extracted from `release_date`
+4. Handled missing values by coercing invalid entries into `NaN`
 
 ---
 
 ## 📊 Exploratory Data Analysis
 
-### 🔹 1. Overall Distribution
-- Most movies have **low budgets and low revenues**.  
-- A few blockbusters (e.g., *Avatar*, *Titanic*) dominate the revenue distribution.  
+### 1. Overall Distribution
+- Most movies have low budgets and low revenues
+- A few blockbusters (Avatar, Titanic) dominate the distribution
 
-📌 *Tools*: `histplot`, KDE plots  
+### 2. Profitability Over Time
+- Calculated average profit by decade
+- The **2000s–2010s** were the most profitable decades in Hollywood
 
----
+### 3. Top 10 Most Profitable Movies
+- Avatar, Titanic, and Star Wars: TFA rank highest in absolute profit
+- Visualized using horizontal bar charts
 
-### 🔹 2. Profitability Over Time
-- Created a `decade` column.  
-- Calculated **average profit by decade**.  
-- 📈 Found that **2000s–2010s** were the most profitable decades in Hollywood.  
+### 4. Correlation Analysis
+- Strong correlation between **budget and revenue** (r = 0.73)
+- ROI has weaker correlation with budget → high budget ≠ high return
 
-📌 *Tools*: `groupby`, line plots  
-
----
-
-### 🔹 3. Top 10 Most Profitable Movies
-- Movies like *Avatar*, *Titanic*, *Star Wars* rank among the highest in profits.  
-- Visualized with horizontal bar charts.  
-
-📌 *Tools*: `sort_values`, `barplot`  
-
----
-
-### 🔹 4. Correlation Analysis
-- Strong correlation between **budget and revenue**.  
-- ROI has weaker correlation with budget → high budget ≠ always high return.  
-
-📌 *Tools*: `heatmap`  
-
----
-
-### 🔹 5. Outlier Handling
-- Extreme outliers (e.g., inflated budget/revenue values) were filtered for better scatterplots.  
-- Clean scatterplot showed positive trend: higher budgets generally lead to higher revenues.  
+### 5. Outlier Handling
+- Filtered extreme outliers for cleaner scatterplots
+- Clean scatter showed a clear positive trend: higher budgets generally yield higher revenues
 
 ---
 
 ## 📌 Key Insights
-1. 🎥 **Most movies don't make massive profits** – only a few blockbusters skew the data.  
-2. 💰 **Budgets and revenues are strongly correlated**.  
-3. 📈 **2000s–2010s** were the most financially successful decades.  
-4. ⚖️ **High budget ≠ high ROI** – smaller films sometimes achieve higher returns.  
+
+1. Most movies don't generate massive profits — only a few blockbusters skew the data
+2. Budget and revenue are strongly correlated (r = 0.73)
+3. The 2000s–2010s were the most financially successful decades
+4. High budget does not guarantee high ROI — smaller films sometimes achieve better returns
+
+---
+
+## 📁 Files
+
+| File | Description |
+|------|-------------|
+| `movies-metadata-analysis.ipynb` | Full EDA notebook |
+| `movies_metadata.csv` | Dataset |
+| `movies_metadata_dashboard.png` | Analysis dashboard |
 
 ---
 
 ## 🛠️ Tools & Libraries
-- **Python 3**  
-- **Pandas** → data cleaning, feature engineering  
-- **Matplotlib / Seaborn** → visualization  
-- **NumPy** → numeric operations  
+
+| Tool | Purpose |
+|------|---------|
+| **Python 3** | Core language |
+| **Pandas** | Data cleaning and feature engineering |
+| **Matplotlib / Seaborn** | Visualization |
+| **NumPy** | Numeric operations |
 
 ---
 
-## ✅ Conclusion
-This project demonstrates how to:
-- Clean and preprocess messy datasets.  
-- Perform financial analysis with Pandas.  
-- Use EDA to uncover trends and insights in movies data.  
+## 👤 About Me
+
+Hi, I'm **Doreen Njagi** — a Data Analyst with a background in Mathematics and Computer Science, based in Nairobi, Kenya 🇰🇪.
+
+I specialize in SQL, Python, Excel, Power BI, and Tableau — turning raw data into clear, actionable insights.
+
+- 📫 [LinkedIn](https://www.linkedin.com/in/doreen-njagi-196350389/)
+- 🌐 [Portfolio](https://doreennjagi.github.io/reen-data-portfolio)
+- 🐙 [GitHub](https://github.com/doreennjagi)
