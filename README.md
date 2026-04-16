@@ -1,5 +1,6 @@
 # Movies Metadata – Exploratory Data Analysis
-
+![Movie Analysis](https://img.shields.io/badge/Project-Movies%20EDA-red?style=for-the-badge&logo=python)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge)
 ![Movies Metadata Dashboard](movies_metadata_dashboard.png)
 
 A Python EDA project exploring **~45,000 movies** from the Kaggle Movies Metadata dataset, focusing on financial performance — budget, revenue, profit, and return on investment (ROI) — and what makes a film commercially successful.
@@ -105,3 +106,12 @@ I specialize in SQL, Python, Excel, Power BI, and Tableau — turning raw data i
 - 📫 [LinkedIn](https://www.linkedin.com/in/doreen-njagi-196350389/)
 - 🌐 [Portfolio](https://doreennjagi.github.io/reen-data-portfolio)
 - 🐙 [GitHub](https://github.com/doreennjagi)
+
+## 📸 Sample Visualizations
+> Charts and plots are available inside the notebook.
+
+## 🚀 How to Run
+1. Clone this repo
+2. Install dependencies: `pip install -r requirements.txt`
+3. Open `movies-metadata-analysis.ipynb` in Jupyter
+4. Run all cells top to bottom
